@@ -1,0 +1,3 @@
+C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_18/cmake-build-debug/CMakeFiles/vector_version_18.dir
+C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_18/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_18/cmake-build-debug/CMakeFiles/rebuild_cache.dir

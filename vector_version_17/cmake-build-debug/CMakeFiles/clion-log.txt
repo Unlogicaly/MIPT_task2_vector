@@ -1,0 +1,4 @@
+"D:\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\tarog\OneDrive - phystech.edu\MIPT\Informatics\Week 15\vector\vector_version_17"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_17/cmake-build-debug

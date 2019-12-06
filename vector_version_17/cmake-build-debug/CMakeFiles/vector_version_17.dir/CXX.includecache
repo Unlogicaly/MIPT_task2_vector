@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_17/main.cpp
+iostream
+-
+vector.h
+C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_17/vector.h
+
+C:/Users/tarog/OneDrive - phystech.edu/MIPT/Informatics/Week 15/vector/vector_version_17/vector.h
+

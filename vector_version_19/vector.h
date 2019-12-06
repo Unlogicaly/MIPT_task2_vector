@@ -22,9 +22,6 @@ struct vector_base {
 
     vector_base(A *a, size_t n) :
             alloc{a}, elem{a->allocate(n)}, sz{n}, space{n} {}
-//
-//    vector_base(const A &a, size_t n) :
-//            alloc{a}, elem{a.allocate(n)}, sz{n}, space{n} {}
 
     ~vector_base() { alloc->deallocate(elem, space); }
 };
@@ -59,6 +56,12 @@ class vector : private vector_base<T, A> {
     T operator[](size_t n) const { return this->elem[n]; }
 
     T &operator[](size_t n) { return this->elem[n]; }
+
+    ~vector() {
+
+        for (size_t i = 0; i < this->sz; ++i)
+            this->alloc->destroy(this->elem + i);
+    }
 };
 
 template <typename T, typename A>
@@ -137,11 +140,6 @@ template <typename T, typename A>
 vector<T, A> &vector<T, A>::operator=(vector<T, A> &&a) {
 
     TRACE_FUNC;
-
-    for (size_t i = 0; i < this->sz; ++i)
-        this->alloc->destroy(&this->elem[i]);
-
-    this->alloc->deallocate(this->elem, this->sz);
 
     std::swap(this->sz, a.sz);
     std::swap(this->elem, a.elem);

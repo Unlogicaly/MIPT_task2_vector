@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="vector_version_17" targetName="vector_version_17" />
+      <config projectName="vector_version_18" targetName="vector_version_18" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,9 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f7bac10-6495-486f-8a6e-0345f616a95f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2261ec5b-82ef-4560-86f8-22e1e66f5f09" name="Default Changelist" comment="Changing encodings of file main.cpp">
+      <change afterPath="$PROJECT_DIR$/../vector_version_17/test.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vector_version_17/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vector_version_17/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vector_version_19/vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/../vector_version_19/vector.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -28,14 +28,18 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="200">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -46,17 +50,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vector.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="500">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.in">
+        <entry file="file://$PROJECT_DIR$/vector.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="640">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding>
+                <element signature="e#42#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +76,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/vector.cpp" />
         <option value="$PROJECT_DIR$/vector.h" />
-        <option value="$PROJECT_DIR$/test.in" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -95,26 +103,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="vector_version_17" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vector_version_17" type="462c0819:PsiDirectoryNode" />
+              <item name="vector_version_18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vector_version_18" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vector_version_18" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vector_version_19" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,7 +138,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="vector_version_17" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vector_version_17" TARGET_NAME="vector_version_17" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vector_version_17" RUN_TARGET_NAME="vector_version_17">
+    <configuration name="vector_version_18" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vector_version_18" TARGET_NAME="vector_version_18" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vector_version_18" RUN_TARGET_NAME="vector_version_18">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -140,39 +149,69 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8f7bac10-6495-486f-8a6e-0345f616a95f" name="Default Changelist" comment="" />
-      <created>1575488733806</created>
+      <changelist id="2261ec5b-82ef-4560-86f8-22e1e66f5f09" name="Default Changelist" comment="" />
+      <created>1575491481864</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575488733806</updated>
-      <workItem from="1575488736954" duration="2000" />
-      <workItem from="1575489904981" duration="1574000" />
-      <workItem from="1575624812397" duration="667000" />
+      <updated>1575491481864</updated>
+      <workItem from="1575491483004" duration="2534000" />
+      <workItem from="1575625481529" duration="876000" />
+      <workItem from="1575626365167" duration="112000" />
+      <workItem from="1575626529134" duration="421000" />
+      <workItem from="1575626978865" duration="249000" />
     </task>
-    <task id="LOCAL-00001" summary="Code for the first version of vector ready">
-      <created>1575491372229</created>
+    <task id="LOCAL-00001" summary="Code for the second version of vector ready">
+      <created>1575494218608</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1575491372229</updated>
+      <updated>1575494218608</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added tests for first version">
-      <created>1575625446434</created>
+    <task id="LOCAL-00002" summary="Added tests for the second version">
+      <created>1575626461560</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1575625446435</updated>
+      <updated>1575626461560</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added tests for the second version (correction of the previous commit)">
+      <created>1575626586243</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575626586243</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changing encodings of file main.cpp">
+      <created>1575626839365</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575626839365</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Reloading main.cpp">
+      <created>1575626917312</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575626917312</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updating again main.cpp">
+      <created>1575627068042</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575627068042</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2243000" />
+    <option name="totallyTimeSpent" value="4192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1704698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20134228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -204,33 +243,51 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Code for the first version of vector ready" />
-    <MESSAGE value="Added tests for first version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for first version" />
+    <MESSAGE value="Code for the second version of vector ready" />
+    <MESSAGE value="Added tests for the second version" />
+    <MESSAGE value="Added tests for the second version (correction of the previous commit)" />
+    <MESSAGE value="Changing encodings of file main.cpp" />
+    <MESSAGE value="Reloading main.cpp" />
+    <MESSAGE value="Updating again main.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating again main.cpp" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.in">
+    <entry file="file://$PROJECT_DIR$/../vector_version_17/vector.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="348">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vector.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="500">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vector.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="200">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
