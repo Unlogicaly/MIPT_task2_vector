@@ -15,6 +15,7 @@ int main() {
     for (auto i = 0; i < c.size(); ++i) {  // размер также узнаётся методом size()
         std::cout << c[i] << " ";  // добавлен оператор []
     }
+
     std::cout << "\n";
 
     const vector d{std::move(c)};  // добавлен конструктор перемещения
