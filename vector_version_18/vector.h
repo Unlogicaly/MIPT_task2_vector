@@ -26,7 +26,7 @@ class vector {
 
     ~vector() { delete[] elem; }
 
-    int size() const { return sz; }
+    size_t size() const { return sz; }
 
     double get(int n) const { return elem[n]; }
 
