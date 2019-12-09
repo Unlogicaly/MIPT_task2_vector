@@ -6,13 +6,13 @@
 #define VECTOR_VERSION_19_VECTOR_H
 
 #include <iostream>
+#include <memory>
 #include "tracer.h"
-
 
 template <typename T, typename A>
 struct vector_base {
 
-    A *alloc;
+    A alloc;
 
     T *elem;
 
@@ -20,10 +20,12 @@ struct vector_base {
 
     size_t space;
 
-    vector_base(A *a, size_t n) :
-            alloc{a}, elem{a->allocate(n)}, sz{n}, space{n} {}
+    vector_base(A a, size_t n) :
+            alloc{a},
+            elem{a.allocate(n)},
+            sz{n}, space{n} {}
 
-    ~vector_base() { alloc->deallocate(elem, space); }
+    ~vector_base() { alloc.deallocate(elem, space); }
 };
 
 
@@ -60,7 +62,7 @@ class vector : private vector_base<T, A> {
     ~vector() {
 
         for (size_t i = 0; i < this->sz; ++i)
-            this->alloc->destroy(this->elem + i);
+            this->alloc.destroy(this->elem + i);
     }
 };
 
@@ -74,21 +76,21 @@ vector<T, A> &vector<T, A>::operator=(const vector<T, A> &a) {
     if (a.sz < this->space) {
 
         for (size_t i = 0; i < a.sz; ++i)
-            this->alloc->construct(&this->elem[i], a.elem[i]);
+            this->alloc.construct(&this->elem[i], a.elem[i]);
 
         this->sz = a.sz;
         return *this;
     }
 
-    auto *p = this->alloc->allocate(a.sz);
+    auto *p = this->alloc.allocate(a.sz);
 
     for (size_t i = 0; i < a.sz; ++i)
-        this->alloc->construct(&p[i], a.elem[i]);
+        this->alloc.construct(&p[i], a.elem[i]);
 
     for (size_t i = 0; i < this->sz; ++i)
-        this->alloc->destroy(&this->elem[i]);
+        this->alloc.destroy(&this->elem[i]);
 
-    this->alloc->deallocate(this->elem, this->sz);
+    this->alloc.deallocate(this->elem, this->sz);
 
     this->space = this->sz = a.sz;
 
@@ -104,27 +106,27 @@ vector<T, A>::vector(const vector<T, A> &other) :
     TRACE_FUNC;
 
     for (size_t i = 0; i < this->sz; ++i)
-        this->alloc->construct(this->elem + i, *(other.elem + i));
+        this->alloc.construct(this->elem + i, *(other.elem + i));
 }
 
 template <typename T, typename A>
 vector<T, A>::vector(std::initializer_list<T> lst) :
-        vector_base<T, A>(new A, lst.size()) {
+        vector_base<T, A>({}, lst.size()) {
 
     TRACE_FUNC;
 
     for (size_t i = 0; i < this->sz; ++i)
-        this->alloc->construct(this->elem + i, *(lst.begin() + i));
+        this->alloc.construct(this->elem + i, *(lst.begin() + i));
 }
 
 template <typename T, typename A>
 vector<T, A>::vector(size_t s) :
-        vector_base<T, A>(new A, s) {
+        vector_base<T, A>({}, s) {
 
     TRACE_FUNC;
 
     for (int i = 0; i < this->sz; ++i)
-        this->alloc->construct(&this->elem[i], T{});
+        this->alloc.construct(&this->elem[i], T{});
 }
 
 template <typename T, typename A>
@@ -133,7 +135,11 @@ vector<T, A>::vector(vector<T, A> &&a) :
 
     TRACE_FUNC;
 
-    std::swap(this->elem, a.elem);
+    this->elem = a.elem;
+
+    a.elem = nullptr;
+    a.sz = 0;
+    a.space = 0;
 }
 
 template <typename T, typename A>
@@ -155,19 +161,17 @@ void vector<T, A>::reserve(size_t newalloc) {
 
     if (newalloc <= this->space)
         return;
-    T *p = this->alloc->allocate(newalloc);
 
-    for (size_t i{0}; i < this->sz; ++i)
-        this->alloc->construct(&p[i], this->elem[i]);
+    vector_base<T, A> p(this->alloc, newalloc);
 
-    for (size_t i = 0; i < this->sz; ++i)
-        this->alloc->destroy(&this->elem[i]);
-
-    this->alloc->deallocate(this->elem, this->sz);
-
-    this->elem = p;
-
-    this->space = newalloc;
+    std::uninitialized_copy(&this->elem[0], &this->elem[this->sz], p.elem);
+    for (size_t i = 0; i < this->sz; ++i) {
+        this->alloc.destroy(&this->elem[i]);
+    }
+    p.sz = this->sz;
+    std::swap(this->elem, p.elem);
+    std::swap(this->sz, p.sz);
+    std::swap(this->space, p.space);
 }
 
 template <typename T, typename A>
@@ -178,7 +182,7 @@ void vector<T, A>::resize(size_t newsize) {
     reserve(newsize);
 
     for (auto i = this->sz; i < newsize; ++i)
-        this->alloc->construct(&this->elem[i], T{});
+        this->alloc.construct(&this->elem[i], T{});
 
     this->sz = newsize;
 }
@@ -194,7 +198,7 @@ void vector<T, A>::push_back(const T &d) {
     else if (this->sz == this->space)
         reserve(this->space * 2);
 
-    this->alloc->construct(&this->elem[this->sz], d);
+    this->alloc.construct(&this->elem[this->sz], d);
 
     ++this->sz;
 }
